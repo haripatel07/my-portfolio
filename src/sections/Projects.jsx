@@ -62,42 +62,43 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center font-mono justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-20 bg-black text-white"
     >
       <RevealOnScroll>
-        <div className="max-w-3xl mx-auto px-4">
+        <div className="w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center">
             Featured Projects
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl flex flex-col items-center text-center border-2 border-white/10 hover:border-blue-500/30 hover:shadow-[9_2px_8px_rgba(59,130,246,0.2)] hover:-translate-y-1 transition-all hover:bg-cyan-900"
+                className="bg-white/5 backdrop-blur-md p-5 rounded-2xl shadow-md border border-white/10 transition-transform transform hover:-translate-y-2 hover:shadow-lg hover:border-blue-400"
               >
-                <h3 className="font-semibold text-xl mb-4">{project.name}</h3>
-                <p className="text-gray-300 mb-4">{project.brief}</p>
-                <div className="flex flex-wrap sm:items-center gap-2 mb-4">
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <img
+                    src={project.image}
+                    alt={`${project.name} image`}
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                </a>
+                <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{project.brief}</p>
+                <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full hover:bg-blue-500/20 hover:shadow-[9_2px_8px_rgba(59,130,22.46,0.2)] transition"
+                      className="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full text-sm hover:bg-blue-600/30 transition"
                     >
                       {tech}
                     </span>
                   ))}
-                </div>
-                <div className="flex flex-col text-center my-5 py-3 justify-center gap-3 border-2 border-white/10 hover:border-blue-500/30 hover:shadow-[9_2px_8px_rgba(59,130,22.46,0.2)] cursor-pointer rounded-xl">
-                  <p className="text-gray-200">View Project</p>
-                  <a
-                    href={project.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex justify-between items-center font-bold text-blue-400 transition-colors hover:text-white"
-                  >
-                    <img src={project.image} alt={`${project.name} Image`} />
-                  </a>
                 </div>
               </div>
             ))}

@@ -4,12 +4,12 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen font-mono flex items-center justify-center py-20 px-4 sm:px-6"
+      className="min-h-screen font-mono flex items-center justify-center py-20 px-4 sm:px-6 bg-black text-white"
     >
       <RevealOnScroll>
-        <div className="px-4 w-full max-w-xl mx-auto">
-          <h2 className="max-w-3xl text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center ">
-            Get In touch
+        <div className="w-full max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-semibold mb-10 text-center bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent">
+            Get In Touch
           </h2>
 
           <form
@@ -17,44 +17,33 @@ export const Contact = () => {
             method="POST"
             className="space-y-6"
           >
-            <div className="relative">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name..."
-                required
-                className="w-full bg-white/10 border border-r-white/10 rounded  px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 "
-              />
-            </div>
-            <div className="relative">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="example@gmail.com"
-                required
-                className="w-full bg-white/10 border border-r-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 "
-              />
-            </div>
-            <div className="relative">
-              <textarea
-                type="message"
-                id="message"
-                name="message"
-                rows={6}
-                placeholder="Type your message..."
-                required
-                className="w-full bg-white/10 border border-r-white/10 rounded  px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 "
-              />
-            </div>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              className="w-full bg-white/10 border border-white/20 rounded-md px-4 py-3 text-white placeholder-gray-400 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/10"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+              className="w-full bg-white/10 border border-white/20 rounded-md px-4 py-3 text-white placeholder-gray-400 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/10"
+            />
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Type your message..."
+              required
+              className="w-full bg-white/10 border border-white/20 rounded-md px-4 py-3 text-white placeholder-gray-400 transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/10"
+            ></textarea>
 
             <button
               type="submit"
-              className=" w-full bg-gradient-to-r flex justify-center cursor-pointer from-teal-500 to-indigo-600 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]  py-3 "
+              className="w-full flex justify-center bg-gradient-to-r from-teal-500 to-indigo-600 text-white px-6 py-3 rounded-md font-semibold transition hover:shadow-lg hover:-translate-y-1"
             >
-              {" "}
-              Submit{" "}
+              Submit
             </button>
           </form>
         </div>

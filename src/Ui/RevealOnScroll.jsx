@@ -8,17 +8,16 @@ function RevealOnScroll({ children }) {
       ([entry]) => {
         if (entry.isIntersecting) {
           ref.current.classList.add("visible");
+          observer.unobserve(ref.current); // stop watching once visible
         }
       },
-      { threshold: 0.2, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.15, rootMargin: "0px 0px -50px 0px" }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
-  });
+  }, []);
 
   return (
     <div ref={ref} className="reveal">
