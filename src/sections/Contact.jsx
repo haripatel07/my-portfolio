@@ -7,7 +7,7 @@ export const Contact = () => {
       className="min-h-screen font-mono flex items-center justify-center py-20 "
     >
       <RevealOnScroll>
-        <div className="px-4 w-150">
+        <div className="px-4 w-125">
           <h2 className="max-w-3xl text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center ">
             Get In touch
           </h2>
