@@ -17,6 +17,7 @@ export const Contact = () => {
             method="POST"
             className="space-y-6"
           >
+            <input type="hidden" name="_next" value="https://haripatel07.github.io/my-portfolio#contact" />
             <input
               type="text"
               name="name"
