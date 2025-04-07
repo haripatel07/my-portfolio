@@ -7,7 +7,7 @@ function About() {
     "Languages": ["Python", "Rust", "SQL", "R", "Java", "C++", "JavaScript", "TypeScript"],
     "Web Development": ["React.js", "Next.js", "Node.js", "Express.js"],
     "Databases": ["MongoDB", "MySQL", "Oracle SQL"],
-    "AI/ML Frameworks": ["TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Hugging Face", "FastAPI", "Flask"],
+    "AI/ML Frameworks": ["TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Flask"],
     "Data Science & Visualization": ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Power BI", "Tableau"],
     "Domains": [
       "Machine Learning & AI",
@@ -17,7 +17,7 @@ function About() {
       "NLP",
       "Computer Vision"
     ],
-    "Cloud & DevOps": ["AWS", "GCP", "Docker", "Git"]
+    "Cloud & DevOps": ["AWS", "GCP", "Git"]
   };
   
 
