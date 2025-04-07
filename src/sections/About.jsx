@@ -47,7 +47,7 @@ function About() {
               <div className="flex flex-col gap-4">
                 {Object.entries(skillsData).map(([category, skills], idx) => (
                   <div key={idx}>
-                    <h4 className="text-lg text-blue-400 font-semibold mb-2">{category}</h4>
+                    <h4 className="text-lg text-gray-300 font-semibold mb-2">{category}</h4>
                     <div className="flex flex-wrap gap-2">
                       {skills.map((skill, i) => (
                         <span
