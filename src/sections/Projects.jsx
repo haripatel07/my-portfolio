@@ -66,7 +66,7 @@ function Projects() {
     >
       <RevealOnScroll>
         <div className="w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center">
+          <h2 className="text-4xl font-semibold mb-12 bg-gradient-to-r from-red-700 to-red-900 bg-clip-text text-transparent text-center">
             Featured Projects
           </h2>
 
@@ -94,7 +94,7 @@ function Projects() {
                   {project.techStack.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full text-sm hover:bg-blue-600/30 transition"
+                      className="bg-blue-600/20 text-red-500 px-3 py-1 rounded-full text-sm hover:bg-blue-600/30 transition"
                     >
                       {tech}
                     </span>

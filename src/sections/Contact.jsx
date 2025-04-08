@@ -8,7 +8,7 @@ export const Contact = () => {
     >
       <RevealOnScroll>
         <div className="w-full max-w-2xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-semibold mb-10 text-center bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl font-semibold mb-10 text-center bg-gradient-to-r from-red-700 to-red-900 bg-clip-text text-transparent">
             Get In Touch
           </h2>
 
@@ -42,7 +42,7 @@ export const Contact = () => {
 
             <button
               type="submit"
-              className="w-full flex justify-center bg-gradient-to-r from-teal-500 to-indigo-600 text-white px-6 py-3 rounded-md font-semibold transition hover:shadow-lg hover:-translate-y-1"
+              className="w-full flex justify-center bg-gradient-to-r from-red-700 to-red-900 text-white px-6 py-3 rounded-md font-semibold transition hover:shadow-lg hover:-translate-y-1"
             >
               Submit
             </button>

@@ -71,7 +71,7 @@ export default function Certificates() {
         className="min-h-screen flex items-center font-mono justify-center py-20">
              <RevealOnScroll>
             <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center">
+            <h2 className="text-4xl font-semibold mb-12 bg-gradient-to-r from-red-700 to-red-900 bg-clip-text text-transparent text-center">
                 Certificates 
             </h2>
 

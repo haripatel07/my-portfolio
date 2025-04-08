@@ -28,7 +28,7 @@ function About() {
     >
       <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center">
+          <h2 className="text-4xl font-semibold mb-12 bg-gradient-to-r from-red-700 to-red-900 bg-clip-text text-transparent text-center">
             About Me
           </h2>
 
@@ -52,7 +52,7 @@ function About() {
                       {skills.map((skill, i) => (
                         <span
                           key={i}
-                          className="bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full hover:bg-blue-500/20 hover:shadow-[9_2px_8px_rgba(59,130,22.46,0.2)] transition"
+                          className="bg-blue-500/10 text-red-500 py-1 px-3 rounded-full hover:bg-blue-500/20 hover:shadow-[9_2px_8px_rgba(59,130,22.46,0.2)] transition"
                         >
                           {skill}
                         </span>
@@ -73,6 +73,11 @@ function About() {
                 </li>
                 <li>Specialized in AI, ML, Data Science, and Software Development.</li>
               </ul>
+              <h3 className="text-2xl text-center font-bold mb-8 mt-8">💭 Favourite Quote</h3>
+              <p className="italic text-center text-gray-300 mt-2 text-lg">
+                “An idiot admires complexity, a genius admires simplicity.” <br />
+                <span className="text-sm text-gray-300">— Terry A. Davis</span>
+              </p>
             </div>
           </div>
 
