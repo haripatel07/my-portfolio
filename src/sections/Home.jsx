@@ -34,7 +34,7 @@ function Home() {
           <a
             className="bg-gradient-to-r flex flex-row from-red-700 to-red-900
  py-3 px-6 rounded hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]  font-medium transition relative overflow-hidden "
-            href="/my-portfolio/resume.pdf"
+            href="resume.pdf"
             download="Hari_Patel_Resume.pdf"
           >
             <p>Resume </p>
