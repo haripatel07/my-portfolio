@@ -60,48 +60,83 @@ function Projects() {
   ]);
 
   return (
-    <section
-      id="projects"
-      className="min-h-screen flex items-center justify-center py-20 bg-black text-white"
-    >
+    <section id="projects" className="min-h-screen py-24 relative z-10">
       <RevealOnScroll>
-        <div className="w-full max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-semibold mb-12 bg-gradient-to-r from-red-700 to-red-900 bg-clip-text text-transparent text-center">
-            Featured Projects
+        <div className="w-full max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl md:text-5xl font-serif mb-20 text-center text-text-main">
+            Selected <span className="italic text-accent-sub">Works.</span>
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-md p-5 rounded-2xl shadow-md border border-white/10 transition-transform transform hover:-translate-y-2 hover:shadow-lg hover:border-blue-400"
-              >
-                <a
-                  href={project.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block"
+          <div className="flex flex-col gap-24 md:gap-32">
+            {projects.map((project, index) => {
+              const isEven = index % 2 !== 0;
+              const numStr = (index + 1).toString().padStart(2, "0");
+
+              return (
+                <div
+                  key={index}
+                  className={`flex flex-col ${isEven ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-10 lg:gap-16 group`}
                 >
-                  <img
-                    src={project.image}
-                    alt={`${project.name} image`}
-                    className="w-full h-48 object-cover rounded-lg mb-4"
-                  />
-                </a>
-                <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{project.brief}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.techStack.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="bg-blue-600/20 text-red-500 px-3 py-1 rounded-full text-sm hover:bg-blue-600/30 transition"
-                    >
-                      {tech}
+                  {/* Image Container */}
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full md:w-[55%] relative block rounded-2xl overflow-hidden shadow-2xl transition-transform duration-700 ease-out group-hover:scale-[1.02] border border-border-subtle"
+                  >
+                    <div className="absolute inset-0 bg-accent-sub/10 mix-blend-overlay group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                    <img
+                      src={project.image}
+                      alt={`${project.name} preview`}
+                      className="w-full h-[300px] md:h-[400px] lg:h-[480px] object-cover filter grayscale-[50%] group-hover:grayscale-0 transition-all duration-700"
+                    />
+                  </a>
+
+                  {/* Content Container */}
+                  <div className="w-full md:w-[45%] flex flex-col justify-center relative">
+                    {/* Background Number */}
+                    <span className="absolute -top-16 -left-6 md:-left-12 text-[8rem] md:text-[12rem] font-serif font-bold text-text-main/[0.03] select-none z-[-1] tracking-tighter">
+                      {numStr}
                     </span>
-                  ))}
+
+                    <div className="mb-4">
+                       <span className="font-mono text-xs tracking-widest text-accent-sub uppercase bg-accent-sub/10 px-3 py-1 rounded-full border border-accent-sub/20">
+                         System.Work_{numStr}
+                       </span>
+                    </div>
+
+                    <h3 className="text-3xl md:text-4xl font-serif font-medium text-text-main mb-6 leading-tight">
+                      {project.name}
+                    </h3>
+                    
+                    <p className="text-text-muted font-sans text-lg mb-8 leading-relaxed max-w-lg">
+                      {project.brief}
+                    </p>
+
+                    <div className="flex flex-wrap gap-3 mb-8">
+                      {project.techStack.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="bg-bg-off border border-border-subtle text-text-muted font-mono text-sm px-4 py-1.5 rounded-full hover:bg-border-subtle hover:text-text-main transition-colors duration-300 shadow-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-text-main font-sans font-medium uppercase tracking-widest text-sm w-max border-b-2 border-accent-sub/0 hover:border-accent-sub pb-1 transition-all duration-300"
+                    >
+                      View Repository
+                      <span className="text-xl transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </RevealOnScroll>

@@ -4,35 +4,40 @@ import { FaSquareGithub } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <footer>
-      <div className="min-h-[100px] flex flex-col justify-center gap-6 text-center text-lg text-gray-300 font-mono mb-10">
-        <div className="flex gap-10 p-4 justify-center text-white">
+    <footer className="w-full border-t border-white/5 bg-transparent mt-20 relative z-20">
+      <div className="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p className="text-gray-400 font-sans text-sm tracking-wide font-medium">
+          © {new Date().getFullYear()} Hari Patel. All rights reserved.
+        </p>
+        <div className="flex gap-8">
           <a
             href="https://x.com/AJDevil07"
-            className="border p-2 text-2xl rounded hover:-translate-y-2 transition-all bg-black text-white"
+            className="text-gray-400 hover:text-white transition-colors duration-300 text-xl hover:scale-110 transform"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Twitter"
           >
             <FaXTwitter />
           </a>
           <a
             href="https://www.linkedin.com/in/haripatel87"
-            className="border p-2 text-2xl rounded hover:-translate-y-2 transition-all bg-blue-700 text-white"
+            className="text-gray-400 hover:text-white transition-colors duration-300 text-xl hover:scale-110 transform"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
             <SlSocialLinkedin />
           </a>
           <a
             href="https://github.com/haripatel07"
-            className="border p-2 text-2xl rounded hover:-translate-y-2 transition-all bg-gray-800 text-white"
+            className="text-gray-400 hover:text-white transition-colors duration-300 text-xl hover:scale-110 transform"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub"
           >
             <FaSquareGithub />
           </a>
         </div>
-        <p>@ 2025 Hari. All rights reserved. </p>
       </div>
     </footer>
   );

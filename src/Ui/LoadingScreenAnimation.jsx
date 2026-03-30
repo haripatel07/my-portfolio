@@ -22,18 +22,18 @@ function LoadingScreenAnimation({ onComplete }) {
     return () => clearInterval(interval);
   }, [onComplete]);
   return (
-    <div className="min-h-screen fixed inset-0 z-50 bg-black text-gray-100 flex flex-col items-center justify-center gap-5">
-      <div className="w-[300px]  h-[3px] bg-gray-800 rounded relative overflow-hidden  ">
-        <div className="w-[40%] h-full bg-red-500 shadow-[0_0_15px_#4179e3] animate-loading-bar "></div>
+    <div className="min-h-screen fixed inset-0 z-50 bg-bg-base text-text-main flex flex-col items-center justify-center gap-5 transition-colors duration-500">
+      <div className="w-[300px] h-[3px] bg-border-subtle rounded relative overflow-hidden">
+        <div className="w-[40%] h-full bg-accent-main shadow-[0_0_15px_var(--color-accent-main)] animate-loading-bar"></div>
       </div>
 
-      <div className="mb-4 text-2xl font-mono font-semibold">
+      <div className="mb-4 text-2xl font-mono font-semibold text-text-muted">
         {text}
-        <span className="animate-blink ml-1 text-2xl font-bold"> | </span>
+        <span className="animate-blink ml-1 text-2xl font-bold text-accent-main"> | </span>
       </div>
 
-      <div className="w-[300px]  h-[3px] bg-gray-800 rounded relative overflow-hidden  ">
-        <div className="w-[40%] h-full bg-red-500 shadow-[0_0_15px_#4179e3] animate-loading-bar "></div>
+      <div className="w-[300px] h-[3px] bg-border-subtle rounded relative overflow-hidden">
+        <div className="w-[40%] h-full bg-accent-sub shadow-[0_0_15px_var(--color-accent-sub)] animate-loading-bar" style={{ animationDelay: '0.2s' }}></div>
       </div>
     </div>
   );
