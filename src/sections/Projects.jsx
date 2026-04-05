@@ -3,35 +3,19 @@ import RevealOnScroll from "../Ui/RevealOnScroll";
 
 const ALL_PROJECTS = [
   {
-    name: "BugReport AI",
-    tagline: "AI-assisted debugging platform that converts raw software errors into structured engineering outputs",
+    name: "Digital Dental Screening and Consultation System",
+    tagline: "Full-stack healthcare AI platform for dental disease detection, clinic discovery, and patient consultation",
     description:
-      "Accepts stack traces, logs, text descriptions, and JSON payloads. Performs input normalization, root cause analysis, bug report generation, semantic similarity search over historical issues using FAISS, and fix recommendation synthesis. Includes a multi-provider LLM fallback chain (Groq, OpenAI, Ollama, rule-based) and persisted analysis history with a reviewer-focused frontend dashboard.",
-    techStack: ["FastAPI", "React 18", "TypeScript", "PostgreSQL", "FAISS", "Docker", "JWT Auth", "GitHub Actions"],
+      "Enables users to upload dental images or X-rays for automated disease detection using custom-trained PyTorch CNN models. Returns confidence scores and personalized recommendations. Integrated clinic locator using geolocation and Geoapify. AI chatbot for dental health queries. Delivered as a React web application, a cross-platform Flutter mobile app, and a FastAPI backend deployed on Hugging Face Spaces.",
+    techStack: ["FastAPI", "PyTorch", "timm", "React 18", "TypeScript", "Flutter", "Docker", "JWT", "SQLite", "Geoapify API"],
     domainTags: ["AI / ML", "Full-Stack"],
     highlights: [
-      "31 RCA patterns across 19 categories covering 7 programming languages",
-      "Guest mode with rate limiting and authenticated history persistence",
-      "Containerized deployment with CI pipeline validating backend tests and frontend build",
+      "Custom CNN models for normal dental image and dental X-ray classification",
+      "Cross-platform delivery: web (React) and mobile (Flutter) from a single backend",
+      "JWT-authenticated user management with full analysis history",
     ],
-    github: "GITHUB_LINK_PLACEHOLDER",
-    liveDemo: "Render (free tier)",
-    liveDemoUrl: null,
-  },
-  {
-    name: "DocuRAG",
-    tagline: "Production-grade Retrieval-Augmented Generation system for technical documentation",
-    description:
-      "Allows users to ask natural-language questions against their own documentation and receive precise, grounded answers with source citations. Supports PDF, Markdown, and web URL ingestion. Query layer rewrites vague inputs before retrieval, classifies query type, and adapts response style. FlashRank cross-encoder reranking pass improves answer quality after FAISS retrieval without full re-embedding cost.",
-    techStack: ["FastAPI", "LangChain", "FAISS", "OpenAI GPT-4o-mini", "HuggingFace Embeddings", "RAGAS", "Docker"],
-    domainTags: ["AI / ML"],
-    highlights: [
-      "Streaming SSE support for token-by-token response delivery",
-      "RAGAS evaluation pipeline measuring context precision, answer relevance, and faithfulness",
-      "Configurable embedding provider: OpenAI or HuggingFace",
-    ],
-    github: "GITHUB_LINK_PLACEHOLDER",
-    liveDemo: null,
+    github: "https://github.com/haripatel07/Digital-Dental-Screening-and-Consultation-System",
+    liveDemo: "Hugging Face Spaces",
     liveDemoUrl: null,
   },
   {
@@ -46,7 +30,7 @@ const ALL_PROJECTS = [
       "Logistic Regression irrigation model achieves approximately 85% accuracy on sensor-based tabular data",
       "12 stars, 6 forks on GitHub; 3 contributors",
     ],
-    github: "GITHUB_LINK_PLACEHOLDER",
+    github: "https://github.com/haripatel07/Smart-Agriculture-System",
     liveDemo: "smart-agriculture-system-delta.vercel.app",
     liveDemoUrl: "https://smart-agriculture-system-delta.vercel.app",
   },
@@ -62,24 +46,8 @@ const ALL_PROJECTS = [
       "Producer-consumer goroutine worker pool with BLPop polling",
       "GitHub webhook integration with cryptographic request validation",
     ],
-    github: "GITHUB_LINK_PLACEHOLDER",
+    github: "https://github.com/haripatel07/SenticFlow",
     liveDemo: null,
-    liveDemoUrl: null,
-  },
-  {
-    name: "Digital Dental Screening and Consultation System",
-    tagline: "Full-stack healthcare AI platform for dental disease detection, clinic discovery, and patient consultation",
-    description:
-      "Enables users to upload dental images or X-rays for automated disease detection using custom-trained PyTorch CNN models. Returns confidence scores and personalized recommendations. Integrated clinic locator using geolocation and Geoapify. AI chatbot for dental health queries. Delivered as a React web application, a cross-platform Flutter mobile app, and a FastAPI backend deployed on Hugging Face Spaces.",
-    techStack: ["FastAPI", "PyTorch", "timm", "React 18", "TypeScript", "Flutter", "Docker", "JWT", "SQLite", "Geoapify API"],
-    domainTags: ["AI / ML", "Full-Stack"],
-    highlights: [
-      "Custom CNN models for normal dental image and dental X-ray classification",
-      "Cross-platform delivery: web (React) and mobile (Flutter) from a single backend",
-      "JWT-authenticated user management with full analysis history",
-    ],
-    github: "GITHUB_LINK_PLACEHOLDER",
-    liveDemo: "Hugging Face Spaces",
     liveDemoUrl: null,
   },
   {
@@ -94,7 +62,39 @@ const ALL_PROJECTS = [
       "78% recall on malicious class — tuned to minimize missed threats over false alarms",
       "LIME explains per-URL predictions with ranked feature contributions",
     ],
-    github: "GITHUB_LINK_PLACEHOLDER",
+    github: "https://github.com/haripatel07/xai-phishing-detector",
+    liveDemo: null,
+    liveDemoUrl: null,
+  },
+  {
+    name: "BugReport AI",
+    tagline: "AI-assisted debugging platform that converts raw software errors into structured engineering outputs",
+    description:
+      "Accepts stack traces, logs, text descriptions, and JSON payloads. Performs input normalization, root cause analysis, bug report generation, semantic similarity search over historical issues using FAISS, and fix recommendation synthesis. Includes a multi-provider LLM fallback chain (Groq, OpenAI, Ollama, rule-based) and persisted analysis history with a reviewer-focused frontend dashboard.",
+    techStack: ["FastAPI", "React 18", "TypeScript", "PostgreSQL", "FAISS", "Docker", "JWT Auth", "GitHub Actions"],
+    domainTags: ["AI / ML", "Full-Stack"],
+    highlights: [
+      "31 RCA patterns across 19 categories covering 7 programming languages",
+      "Guest mode with rate limiting and authenticated history persistence",
+      "Containerized deployment with CI pipeline validating backend tests and frontend build",
+    ],
+    github: "https://github.com/haripatel07/bugreport-ai",
+    liveDemo: "Render (free tier)",
+    liveDemoUrl: "https://bugreport-ai-frontend.onrender.com",
+  },
+  {
+    name: "DocuRAG",
+    tagline: "Production-grade Retrieval-Augmented Generation system for technical documentation",
+    description:
+      "Allows users to ask natural-language questions against their own documentation and receive precise, grounded answers with source citations. Supports PDF, Markdown, and web URL ingestion. Query layer rewrites vague inputs before retrieval, classifies query type, and adapts response style. FlashRank cross-encoder reranking pass improves answer quality after FAISS retrieval without full re-embedding cost.",
+    techStack: ["FastAPI", "LangChain", "FAISS", "OpenAI GPT-4o-mini", "HuggingFace Embeddings", "RAGAS", "Docker"],
+    domainTags: ["AI / ML"],
+    highlights: [
+      "Streaming SSE support for token-by-token response delivery",
+      "RAGAS evaluation pipeline measuring context precision, answer relevance, and faithfulness",
+      "Configurable embedding provider: OpenAI or HuggingFace",
+    ],
+    github: "https://github.com/haripatel07/DocuRAG",
     liveDemo: null,
     liveDemoUrl: null,
   },
@@ -110,7 +110,7 @@ const ALL_PROJECTS = [
       "Trained on Drebin dataset: 5,560 malware samples and 9,476 benign applications",
       "Sample output: 99.21% confidence on benign ZArchiver.apk",
     ],
-    github: "GITHUB_LINK_PLACEHOLDER",
+    github: "https://github.com/haripatel07/android-malware-detector",
     liveDemo: null,
     liveDemoUrl: null,
   },
@@ -126,7 +126,7 @@ const ALL_PROJECTS = [
       "Concurrent fuzzing with configurable thread count and requests-per-second rate limiting",
       "Detects 8 distinct vulnerability classes via status code, response time, pattern, and header analysis",
     ],
-    github: "GITHUB_LINK_PLACEHOLDER",
+    github: "https://github.com/haripatel07/ai-smart-fuzzer",
     liveDemo: null,
     liveDemoUrl: null,
   },
@@ -180,9 +180,8 @@ function ProjectCard({ project, index }) {
         {/* Description with expand */}
         <div className="mb-5">
           <p
-            className={`text-text-muted font-sans text-sm leading-relaxed ${
-              expanded ? "" : "line-clamp-3"
-            } transition-all duration-300`}
+            className={`text-text-muted font-sans text-sm leading-relaxed ${expanded ? "" : "line-clamp-3"
+              } transition-all duration-300`}
           >
             {project.description}
           </p>
@@ -276,11 +275,10 @@ function Projects() {
               <button
                 key={tab}
                 onClick={() => setActiveFilter(tab)}
-                className={`font-mono text-xs tracking-widest uppercase px-5 py-2 rounded-full border transition-all duration-300 ${
-                  activeFilter === tab
+                className={`font-mono text-xs tracking-widest uppercase px-5 py-2 rounded-full border transition-all duration-300 ${activeFilter === tab
                     ? "bg-accent-sub/10 border-accent-sub/50 text-accent-sub shadow-[0_0_12px_rgba(0,249,255,0.15)]"
                     : "bg-bg-off/80 border-border-subtle text-text-muted hover:border-accent-sub/30 hover:text-text-main"
-                }`}
+                  }`}
               >
                 {tab}
               </button>
